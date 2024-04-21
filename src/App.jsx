@@ -10,7 +10,7 @@ function App() {
     <>
       <Header />
       <h1 className="text-3xl font-bold underline text-center">Hello world!</h1>
-      <div className="flex flex-row">
+      <div className="flex flex-col md:flex-row">
         <AccordionItems isActiveOn={setActiveContent} />
         <MainContent activeContent={activeContent} />
       </div>
