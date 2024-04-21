@@ -1,8 +1,9 @@
 import React from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import { AcmeLogo } from "../../assets/AcmeLogo";
+import SwitchButton from "../Switch";
 
-export default function App() {
+export default function Navigation() {
   return (
     <Navbar>
       <NavbarBrand>
@@ -29,6 +30,9 @@ export default function App() {
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
           <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <SwitchButton />
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
