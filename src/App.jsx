@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import AccordionItems from "./components/AccordionItems";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
+import NewCard from "./components/Card";
+import { motion } from "framer-motion";
 
 function App() {
   const [activeContent, setActiveContent] = useState(null);
@@ -15,6 +17,12 @@ function App() {
         <AccordionItems isActiveOn={setActiveContent} />
         <MainContent activeContent={activeContent} />
       </div>
+      <div className="flex flex-row justify-center">
+        <motion.div animate={{ y: [-10, 10, -10], x: [-6, 6, -6] }} transition={{ repeat: Infinity, duration: 7, ease: "linear" }}>
+          <NewCard />
+        </motion.div>
+      </div>
+
       <Footer />
     </div>
   );
